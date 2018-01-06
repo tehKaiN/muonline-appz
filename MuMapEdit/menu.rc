@@ -1,0 +1,46 @@
+200 MENU
+BEGIN
+ POPUP "&Plik"
+  BEGIN
+  POPUP "&Otwórz"
+    BEGIN
+    MENUITEM ".&MAP", 101
+    MENUITEM ".&ATT", 102
+    MENUITEM "Terrain&Light", 103
+    MENUITEM "Terrain&Height", 104
+    POPUP "&Tekstury"
+      BEGIN
+      MENUITEM "TileGrass01", 112
+      MENUITEM "TileGrass02", 113
+      MENUITEM "TileGround01", 114
+      MENUITEM "TileGround02", 115
+      MENUITEM "TileGround03", 116
+      MENUITEM "TileWater01", 117
+      MENUITEM "TileWood01", 118
+      MENUITEM "TileRock01", 119
+      MENUITEM "TileRock02", 120
+      MENUITEM "TileRock03", 121
+      MENUITEM "TileRock04", 122
+      MENUITEM "TileRock05", 123
+      MENUITEM "TileRock06", 124
+      MENUITEM "TileRock07", 125
+      MENUITEM "&Wszystkie", 127
+      MENUITEM "B³êdna", 126
+      END
+    MENUITEM "&Wszystko", 105
+    END
+  POPUP "&Zapisz"
+    BEGIN
+    MENUITEM ".&MAP", 106
+    MENUITEM ".&ATT", 107
+    MENUITEM "Terrain&Light", 108
+    MENUITEM "Terrain&Height", 109
+    MENUITEM "&Wszystko", 110  
+    END
+  MENUITEM "&Wczytaj poprzedni¹ sesjê", 128
+  MENUITEM SEPARATOR
+  MENUITEM "&Koniec", 111
+
+  END
+
+END
