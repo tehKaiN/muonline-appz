@@ -1,0 +1,33 @@
+# Project: muConfig
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = muConfig_private.res
+OBJ  = muKonfig.o $(RES)
+LINKOBJ  = muKonfig.o $(RES)
+LIBS =  -L"D:/kompilatory/Dev-Cpp/lib" -mwindows  -s -march=pentium2 
+INCS =  -I"D:/kompilatory/Dev-Cpp/include" 
+CXXINCS =  -I"D:/kompilatory/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/kompilatory/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/kompilatory/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/kompilatory/Dev-Cpp/include/c++/3.4.2"  -I"D:/kompilatory/Dev-Cpp/include" 
+BIN  = muConfig.exe
+CXXFLAGS = $(CXXINCS)   -O3 -march=pentium2
+CFLAGS = $(INCS)   -O3 -march=pentium2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before muConfig.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "muConfig.exe" $(LIBS)
+
+muKonfig.o: muKonfig.c
+	$(CC) -c muKonfig.c -o muKonfig.o $(CFLAGS)
+
+muConfig_private.res: muConfig_private.rc main.rc 
+	$(WINDRES) -i muConfig_private.rc --input-format=rc -o muConfig_private.res -O coff 
