@@ -963,7 +963,7 @@ begin
           101:       ///////////////////////MAP READ
             begin
               PrepOpen(pchar('Pliki map'#00'*.map'#00),'map');
-              if getopenfilename(@otworz) then
+              if GetOpenFileName(@otworz) then
                 frOpen(pchar(FilePath),$0F);
                 AttMapRead(0,2,1);
             end;
